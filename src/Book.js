@@ -40,6 +40,15 @@ class Book {
         cardBody.append(newAuthor);
         newAuthor.textContent = this.author;
         
+        let deleteBtn = document.createElement("button"); // Bouton pour supprimer la carte
+        deleteBtn.classList.add("deleteBtn");
+        deleteBtn.classList.add("btn");
+        deleteBtn.classList.add("btn-success");
+        cardBody.append(deleteBtn);
+        deleteBtn.textContent = "Supprimer";
+        deleteBtn.addEventListener('click', function() { 
+            column.remove(); 
+        });
         
     }
 }

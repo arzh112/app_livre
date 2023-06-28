@@ -13,3 +13,8 @@ form.addEventListener('submit', (event)=>{
 });
 
 
+$(document).ready(function(){
+    $("#slide").click(function(){
+        $("#form").slideToggle();
+    }); 
+});

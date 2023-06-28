@@ -12,7 +12,7 @@
     <div class="container-fluid">
 
         <h1 class="text-center">Mes livres</h1>
-            <form action="" class="form-inline">
+            <form id="form" action="" class="form-inline">
                 <div class="form-group">
                     <label for="title">Titre</label>
                     <input type="text" id="title" class="form-control" name="book-title" required>
@@ -25,17 +25,19 @@
                     <label for="image">Image</label>
                     <input type="text" id="image" class="form-control" name="book-image" required>
                 </div>
-                <button type="submit" class="btn btn-primary col-12 my-3">Envoyer</button>
-            </form>      
-        
-        <div class="row">
+                <button type="submit" class="btn btn-success col-12 my-3 slide">Envoyer</button>
+                
+            </form>   
+
+            <button id="slide" class="btn btn-success col-12 my-3">Masquer / Dérouler</button>
+       
+            <div class="row">
     
-        </div>
+            </div>
         
     </div>
        
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./src/script.js"></script>
     
 

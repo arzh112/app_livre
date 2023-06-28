@@ -166,6 +166,15 @@ var Book = /*#__PURE__*/function () {
       newAuthor.classList.add("card-title");
       cardBody.append(newAuthor);
       newAuthor.textContent = this.author;
+      var deleteBtn = document.createElement("button"); // Bouton pour supprimer la carte
+      deleteBtn.classList.add("deleteBtn");
+      deleteBtn.classList.add("btn");
+      deleteBtn.classList.add("btn-success");
+      cardBody.append(deleteBtn);
+      deleteBtn.textContent = "Supprimer";
+      deleteBtn.addEventListener('click', function () {
+        column.remove();
+      });
     }
   }]);
   return Book;
@@ -185,6 +194,11 @@ form.addEventListener('submit', function (event) {
   library.push(newBook);
   newBook.cardCreation();
   form.reset();
+});
+$(document).ready(function () {
+  $("#slide").click(function () {
+    $("#form").slideToggle();
+  });
 });
 },{"./Book.js":"src/Book.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -211,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57917" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58299" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
